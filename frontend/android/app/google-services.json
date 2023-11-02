@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1051824519847",
+    "project_id": "my-data-store-cc0b4",
+    "storage_bucket": "my-data-store-cc0b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051824519847:android:e33944eb15c53d92173982",
+        "android_client_info": {
+          "package_name": "com.example.petrolium"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxeeawlHiQm_fNH4pRwaNgHWzlCqTNRGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
