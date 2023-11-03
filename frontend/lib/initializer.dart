@@ -12,7 +12,7 @@ abstract class Initializer {
   static Future<void> initApp() async {
     WidgetsFlutterBinding.ensureInitialized();
     _initializeLogger();
-    await _initFirebase();
+    // await _initFirebase();
     await _initStorage();
     await _initTheme();
     _initLooks();
