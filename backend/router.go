@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Enhancifire/Petrolium/backend/controllers"
+	"github.com/Enhancifire/Petrolium/backend/modules/auth"
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,6 +10,7 @@ type AppRouter struct {
 	Petrol   string
 	Register string
 	Login    string
+	PetrolID string
 }
 
 func CreateRouter() *AppRouter {
@@ -18,6 +19,7 @@ func CreateRouter() *AppRouter {
 		Petrol:   "/petrol",
 		Register: "/register",
 		Login:    "/login",
+		PetrolID: "/petrol/:id",
 	}
 	return router
 }
@@ -28,6 +30,11 @@ func GetRoutes() *gin.Engine {
 
 	router.GET(appRoutes.Home, HomeHandler)
 	router.GET(appRoutes.Petrol, GetPetrolList)
-	router.POST(appRoutes.Register, controllers.Register)
+	router.GET(appRoutes.PetrolID, GetPetrolInstance)
+	router.POST(appRoutes.Petrol, AddPetrolData)
+	router.PATCH(appRoutes.PetrolID, UpdatePetrolData)
+	router.DELETE(appRoutes.PetrolID, DeletePetrolInstance)
+	router.POST(appRoutes.Register, auth.Register)
+
 	return router
 }

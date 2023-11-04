@@ -9,6 +9,8 @@ func main() {
 
 	fmt.Println("Petrolium Backend")
 
+	SetupDatabase()
+
 	router := GetRoutes()
 	err := router.Run("localhost:8090")
 	handleError(err)
